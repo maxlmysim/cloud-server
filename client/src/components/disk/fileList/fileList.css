@@ -1,0 +1,61 @@
+.filelist {
+  margin: 20px 0;
+}
+.filelist__header {
+  display: grid;
+  grid-template-columns: 1fr 4fr repeat(4, 1fr);
+}
+.filelist__name {
+  grid-column-start: 2;
+}
+.filelist__date {
+  grid-column-start: 5;
+  justify-self: center;
+}
+.filelist__size {
+  grid-column-start: 6;
+  justify-self: center;
+}
+.fileplate {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.file-enter-active {
+  animation: file-enter 600ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.file-exit-active {
+  animation: file-exit 600ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes file-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotateX(-90deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) rotateX(10deg);
+  }
+  100% {
+    transform: scale(1) rotateX(0);
+  }
+}
+
+@keyframes file-exit {
+  0% {
+    opacity: 1;
+    transform: scale(1) rotateX(0);
+  }
+  40% {
+    transform: scale(0.9) rotateX(10deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.7) rotateX(-90deg);
+  }
+}
+
+/*# sourceMappingURL=fileList.css.map */
